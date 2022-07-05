@@ -1,6 +1,5 @@
-package com.belong.phonenumberservice;
+package com.belong.phonenumber;
 
-import com.belong.phonenumber.PhoneNumberServiceApplication;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
