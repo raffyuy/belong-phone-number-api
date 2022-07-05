@@ -37,7 +37,7 @@ GET http://localhost:8080/belong/api/v1/phonenumbers
 GET http://localhost:8080/belong/api/v1/customers/{customerID}/phonenumbers 
 ```
 
-### Actiave a specific phone number
+### Activate a specific phone number
 ```
 PATCH http://localhost:8080/belong/api/v1/phonenumbers/{number}/activate
 ```
