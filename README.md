@@ -15,7 +15,7 @@ Assumptions:
 * Use JDK 11+ 
 * Clone this repository
 * Build project with ```./gradlew clean build```
-* Run the project wiht
+* Run the project with
 ```
     gradle bootRun
 ```
