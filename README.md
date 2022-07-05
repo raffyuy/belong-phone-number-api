@@ -1,7 +1,7 @@
 # Belong Phone Number Service 
 This is a Phone number service built using Java, Gradle, and Spring Boot
 
-####Assumptions:
+Assumptions:
 1. Lists require no pagination 
 2. Will use Relational DB 
 3. No error handling necessary
