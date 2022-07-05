@@ -8,7 +8,7 @@ import org.springframework.http.MediaType;
 import org.springframework.test.web.servlet.MockMvc;
 
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
-import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
+import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.patch;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
 
 @SpringBootTest
@@ -30,7 +30,7 @@ public class PhoneNumberIntegrationTests {
 
     @Test
     public void activateReturnsActivatedPhoneNumberRecord() throws Exception {
-        mvc.perform(post("/api/v1/phonenumbers/0491570006/activate").contentType(MediaType.APPLICATION_JSON))
+        mvc.perform(patch("/api/v1/phonenumbers/0491570006/activate").contentType(MediaType.APPLICATION_JSON))
                 .andExpect(status().isOk())
                 .andExpect(content().contentTypeCompatibleWith(MediaType.APPLICATION_JSON))
                 .andExpect(jsonPath("$.phoneNumber").value("0491570006"))
@@ -40,7 +40,7 @@ public class PhoneNumberIntegrationTests {
 
     @Test
     public void activateReturnsErrorOnNonexistentNumber() throws Exception {
-        mvc.perform(post("/api/v1/phonenumbers/12345/activate").contentType(MediaType.APPLICATION_JSON))
+        mvc.perform(patch("/api/v1/phonenumbers/12345/activate").contentType(MediaType.APPLICATION_JSON))
                 .andExpect(status().isNotFound());
     }
 }

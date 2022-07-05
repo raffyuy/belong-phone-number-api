@@ -56,7 +56,7 @@ public class PhoneNumberController {
                             schema = @Schema(implementation = PhoneNumber.class)) }),
             @ApiResponse(responseCode = "404", description = "Phone number not found",
                     content = @Content) })
-    @PostMapping("/phonenumbers/{id}/activate")
+    @PatchMapping("/phonenumbers/{id}/activate")
     ResponseEntity<?> activatePhoneNumber(@PathVariable String id) {
         log.info("Updating phone number: {}", id);
         Optional<PhoneNumber> phoneNumberById = phoneNumberRepository.findById(id);
